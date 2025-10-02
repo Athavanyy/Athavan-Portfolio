@@ -49,14 +49,12 @@ export default function Projects() {
               </div>
               
               <div className="project-content">
-                <a 
-                  href={`/projects/${project.id}`} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                <Link 
+                  to={`/projects/${project.id}`} 
                   className="project-title-link"
                 >
                   <h3 className="project-title">{project.title}</h3>
-                </a>
+                </Link>
                 <p className="project-description">{project.description}</p>
                 
                 <div className="project-details">

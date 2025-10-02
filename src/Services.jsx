@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Services() {
+  const navigate = useNavigate();
+  
   // Services data array containing all service offerings
   const services = [
     {
@@ -69,7 +72,7 @@ export default function Services() {
         <div className="services-cta">
           <h3>Ready to Start Your Project?</h3>
           <p>Let's discuss how I can help bring your vision to life.</p>
-          <button className="cta-button" onClick={() => window.location.href = '/contact'}>
+          <button className="cta-button" onClick={() => navigate('/contact')}>
             Get In Touch
           </button>
         </div>

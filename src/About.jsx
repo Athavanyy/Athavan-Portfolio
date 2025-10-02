@@ -6,7 +6,7 @@ export default function About() {
     try {
       // Create a link element to download the resume PDF
       const link = document.createElement('a');
-      link.href = './resume.pdf'; // Use relative path
+      link.href = '/resume.pdf'; // Use absolute path from public directory
       link.download = 'Athavan_Yokanathan_Resume.pdf';
       link.target = '_blank';
       document.body.appendChild(link);
@@ -15,7 +15,7 @@ export default function About() {
     } catch (error) {
       console.error('Failed to download resume:', error);
       // Fallback: try to open in new tab
-      window.open('./resume.pdf', '_blank');
+      window.open('/resume.pdf', '_blank');
     }
   };
 
@@ -28,7 +28,7 @@ export default function About() {
           {/* Profile Image Section */}
           <div className="profile-image-section">
             <img
-              src="./profile-image.jpg"
+              src="/profile-image.jpg"
               alt="Athavan Yokanathan Profile"
               className="profile-image"
               onError={(e) => {
